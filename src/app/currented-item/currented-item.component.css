@@ -1,0 +1,47 @@
+.currented-item__text
+{
+  font-size: 18px;
+}
+
+.currented-item__btn
+{
+  appearance: none;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 6px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn_delete
+{
+  border: 1px solid #FF3633;
+  color: #FF3633;
+  margin-right: 10px;
+}
+
+.btn_delete:hover{
+  color: #fff;
+  background-color: #FF3633;
+}
+
+.btn_delete:active {
+  color: #fff;
+  background-color: #DB322D;
+}
+
+.btn_complete
+{
+  border: 1px solid #8FEB2D;
+  color: #8FEB2D;
+}
+
+.btn_complete:hover {
+  color: #fff;
+  background-color: #8FEB2D;
+}
+
+.btn_complete:active {
+  color: #fff;
+  background-color: #53DB27;
+}

@@ -1,0 +1,35 @@
+<div class="container">
+  <section class="main">
+    <h1 class="main__title">To Do</h1>
+    <form class="main__input-tasks" #myForm="ngForm">
+      <p class="input-tasks__text">Task:</p>
+      <input class="input-tasks__field" ngModel name="task" type="text" placeholder="Enter your task">
+      <button class="input-tasks__btn" (click)="addTask(myForm)">Add task</button>
+    </form>
+  </section>
+
+  <section class="items-list">
+    <div class="items">
+      <h2 class="items__title">Curent tasks:</h2>
+      <app-currented-item
+        class="item"
+        *ngFor="let task of currentTasks"
+        [text]="task.description"
+        [workId]="task.id"
+        (onDeleteTask)="onDelete($event)"
+        (onComletedTask)="onComleted($event)">
+      </app-currented-item>
+    </div>
+
+    <div class="items">
+      <h2 class="items__title">Completed task:</h2>
+      <app-completed-item
+        class="item"
+        *ngFor="let completedTask of completedTasks"
+        [text]="completedTask">
+      </app-completed-item>
+    </div>
+  </section>
+</div>
+
+
